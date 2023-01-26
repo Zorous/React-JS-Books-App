@@ -22,9 +22,9 @@ function SearchForm() {
     else {
       setSearchTerm(searchText.current.value);
     }
-    // navigate("/book");
+    navigate("book");
 
-  }
+  };
 
   return (
     <div className='search-form'>
