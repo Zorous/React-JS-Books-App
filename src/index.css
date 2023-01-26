@@ -2,7 +2,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,600;0,700;0,800;1,500;1,600;1,700&display=swap');
 
   :root{
-    --primary-color:##0fbcf9;
+    --blue-color:#0fbcf9;
     --secondary-color:##f6e58d;
     --grey-color:#f3f3f3;
     --white-color:#fff;
@@ -70,7 +70,7 @@
 
 
   /* Back-grounds */
-.bg-blue{background-color: var(--primary-color);}
+.bg-blue{background-color: var(--blue-color);}
 .bg-yellow{background-color: var(--secondary-color);}
 .bg-white{background-color: var(--white-color);}
 
@@ -78,7 +78,7 @@
 /* Text */
 .text-black{color: var(--black-color)}
 .text-white{color: var(--white-color);}
-.text-blue{color: var(--primary-color);}
+.text-blue{color: #0fbcf9;}
 .text-light-black{color: var(--light-black-color);}
 .text-uppercase{text-transform: uppercase;}
 .text-center{text-align: center;}
