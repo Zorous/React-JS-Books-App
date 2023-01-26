@@ -1,0 +1,5 @@
+.header-content{
+    min-height: 75vh;
+    background-color: linear-gradient(rgba(15, 188, 249,0.5),rgba(15, 188, 249,0.7)),
+    url('../../images/library-img.jpg') center/cover no-repeat;
+}
