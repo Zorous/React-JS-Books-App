@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import "./Booklist.css";
 
-const Book = (book) => {
+function Book(book){
   return (
     <div className='book-item flex flex-column flex-sb'>
       <div className='book-item-img'>

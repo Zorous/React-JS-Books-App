@@ -1,7 +1,8 @@
-.padding{
+.loader{
     padding: 4rem 0;
 }
 
 .loader img{
     width: 120px;
+    align-items: center;
 }

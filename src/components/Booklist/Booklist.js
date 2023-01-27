@@ -1,5 +1,6 @@
 import React from 'react';
 import { useGlobalContext } from '../../context';
+import Header from "../Header/Header";
 import Loading from '../Loader/Loader';
 import NotFound_img from '../../images/cover_not_found.jpg';
 import Book from "./Book";
@@ -24,6 +25,8 @@ console.log(booksWithCovers);
 
 if(loading) return <Loading />;
   return (
+    <>
+    <Header />
    <section className='booklist'>
    <div className='container'>
    <div className='section-title'>
@@ -32,12 +35,13 @@ if(loading) return <Loading />;
    <div className='booklist-content grid'>
    {
 booksWithCovers.slice(0,30).map((item,index)=>{
-    <Book key={index} {...item} />
+   return <Book key={index} {...item} />
 })
    }
    </div>
    </div>
    </section>
+   </>
   )
 }
 
