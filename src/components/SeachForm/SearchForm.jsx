@@ -36,9 +36,12 @@ function SearchForm() {
               ref={searchText} />
             <button type='submit' className='flex flex-c'
               onClick={handleSubmit}>
-              <FaSearch className='text-blue' size={32} />
+              <FaSearch className='search-icon text-blue' size={32} />
             </button>
           </form>
+          <button className='search-icon-sm'>
+          <FaSearch className='text-white'  size={32} />
+          </button>
         </div>
       </div>
     </div>
