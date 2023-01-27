@@ -16,7 +16,7 @@ const About = () => {
           </div>
           <div className='about-text'>
             <h2 className='about-title fs-26 ls-1'>About BookHub</h2>
-            <p className='fs-17'>That's actually a Demo <b className='text-blue'>React Js</b> project made by le emi des!</p>
+            <p className='fs-17'>That's actually a Demo <b className='text-blue'>React Js</b> project made by Oussama</p>
             <p className='fs-17'>Using React JS good practices and fondamentales</p>
           </div>
         </div>
