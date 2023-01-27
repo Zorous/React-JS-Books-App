@@ -37,9 +37,10 @@
 .search-icon{
     display: none;
 }
-.search-form{
-    width: 90%;
-    max-width: 480px;
+
+.form-control{
+    width: 400px;
 }
+
 
 }
