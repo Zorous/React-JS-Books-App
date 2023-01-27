@@ -1,7 +1,7 @@
-@media screen and (max-width : 876px){
+@media screen and (max-width : 1080px){
 
     .main{
-        margin:2em !important;
+        margin: 1em !important;
     }
 
 }
