@@ -1,8 +1,98 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { useParams, useNavigate } from 'react-router-dom';
+
+import Loading from '../Loader/Loader';
+import NotFoundImg from "../../images/cover_not_found.jpg";
+
+import { FaArrowLeft } from "react-icons/fa";
+
+import "./BookDetails.css";
+
+const URL = "https://openlibrary.org/works/";
 
 function BookDetails() {
+  const { id } = useParams();
+  const [loading, setLoading] = useState(false);
+  const [book, setBook] = useState(null);
+  const navigate = useNavigate();
+
+
+  useEffect(() => {
+    setLoading(true);
+    async function getBookDetails() {
+      try {
+        //getting the passed id's data
+        const response = await fetch(`${URL}${id}.json`);
+
+        //pending
+        const data = await response.json();
+        // console.log(data);
+
+        if (data) {
+          //sorting the data and treating the Not Found issues
+          const { description, title, covers, subject_places, subject_times, subjects } = data;
+          const book = {
+            description: description ? description.value : "No description found",
+            title: title,
+            cover_img: covers ? `https://covers.openlibrary.org/b/id/${covers[0]}-L.jpg` : NotFoundImg,
+            subject_places: subject_places ? subject_places.join(', ') : "No subject found",
+            subject_times: subject_times ? subject_times.join(', ') : "No subject times found",
+            subjects: subjects ? subjects.join(', ') : "No subjects found"
+          }
+
+          setBook(book);
+        }
+        else {
+          setBook(null)
+        }
+        //fulfilled
+        setLoading(false);
+      }
+      catch (error) {
+        console.log(error);
+        setLoading(false);
+      }
+
+    }
+    getBookDetails();
+  }, [id])
+
+  console.log(book)
+
   return (
-    <div>BookDetails</div>
+    <section className='book-details'>
+      <div className='container'>
+        <button type='button' className='back-btn flex flex-c' onClick={() => navigate("/book")}>
+          <FaArrowLeft size={22} /> <span className='fs-18 fw-6'>Go Back</span>
+        </button>
+
+        <div className='book-details-content grid'>
+          <div className='book-details-img'>
+            <img src={book?.cover_img} alt="cover thumbnail" />
+            <div className='book-details-info'>
+              <div className='book-details-item title'>
+                <span className='fw-6 fs-24'>{book?.title}</span>
+              </div>
+              <div className='book-details-item description'>
+                <span className='fw-6 fs-24'>{book?.description}</span>
+              </div>
+              <div className='book-details-item subject-places'>
+                <span className='fw-6'>Subject Places : </span>
+                <span className='text-italic'>{book?.subject_places}</span>
+              </div>
+              <div className='book-details-item subject-times'>
+                <span className='fw-6'>Subject times : </span>
+                <span className='text-italic'>{book?.subject_times}</span>
+              </div>
+              <div className='book-details-item subjects'>
+                <span className='fw-6'>Subjects : </span>
+                <span className='text-italic'>{book?.subjects}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 

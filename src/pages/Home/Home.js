@@ -4,7 +4,7 @@ import welcomeImg from "../../images/about-img.jpg";
 
 function Home() {
     return (
-        <main className='bg-grey mg-5'>
+        <main className='main bg-grey mg-5'>
         <div className='section-title flex flex-c fs-20 text-light-black pd-3'>
         <h1>Welcome to your Bookclub</h1>
       </div>

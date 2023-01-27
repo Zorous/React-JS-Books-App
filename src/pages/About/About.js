@@ -16,8 +16,8 @@ const About = () => {
           </div>
           <div className='about-text'>
             <h2 className='about-title fs-26 ls-1'>About BookHub</h2>
-            <p className='fs-17'>That's actually a demo <b className='text-blue'>React js</b> project made by le emi des!</p>
-            <p className='fs-17'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta, possimus inventore eveniet atque voluptatibus repellendus aspernatur illo aliquam dignissimos illum. Commodi, porro omnis dolore amet neque modi quas eum!</p>
+            <p className='fs-17'>That's actually a Demo <b className='text-blue'>React Js</b> project made by le emi des!</p>
+            <p className='fs-17'>Using React JS good practices and fondamentales</p>
           </div>
         </div>
       </div>
