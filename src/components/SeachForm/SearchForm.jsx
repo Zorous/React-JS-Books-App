@@ -39,8 +39,10 @@ function SearchForm() {
               <FaSearch className='search-icon text-blue' size={32} />
             </button>
           </form>
-          <button className='search-icon-sm'>
-          <FaSearch className='text-white'  size={32} />
+          <button type='submit' className='search-icon-sm'
+          onClick={handleSubmit}>
+          <FaSearch className='text-white'  size={32} 
+          />
           </button>
         </div>
       </div>

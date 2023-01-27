@@ -37,4 +37,9 @@
 .search-icon{
     display: none;
 }
+.search-form{
+    width: 100%;
+    max-width: 480px;
+}
+
 }
