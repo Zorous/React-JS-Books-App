@@ -73,6 +73,7 @@
 .bg-blue{background-color: var(--blue-color);}
 .bg-yellow{background-color: var(--secondary-color);}
 .bg-white{background-color: var(--white-color);}
+.bg-grey{background-color: var(--grey-color);}
 
 
 /* Text */
@@ -145,4 +146,40 @@
 font-weight: 600;
 text-transform: uppercase;
 padding:18px 0 24px 0;
+}
+
+
+
+
+/* margins */
+.mg-5{
+  margin: 5em;
+}
+.mg-4{
+  margin: 4em;
+}
+.mg-3{
+  margin: 3em;
+}
+.mg-2{
+  margin: 2em;
+}
+.mg-1{
+  margin: 1em;
+}
+
+
+.mgt-5{
+  margin-top: 5em;
+}
+.mgb-5{
+  margin-bottom: 5em;
+}
+
+
+
+/* paddings */
+
+.pd-3{
+  padding:3em;
 }

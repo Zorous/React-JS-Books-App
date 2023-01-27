@@ -5,6 +5,7 @@ import Loading from '../Loader/Loader';
 import NotFound_img from '../../images/cover_not_found.jpg';
 import Book from "./Book";
 import "./Booklist.css";
+import { Outlet } from 'react-router-dom';
 
 
 //https://covers.openlibrary.org/b/id/240727-S.jpg
@@ -25,8 +26,7 @@ console.log(booksWithCovers);
 
 if(loading) return <Loading />;
   return (
-    <>
-    <Header />
+    <div>
    <section className='booklist'>
    <div className='container'>
    <div className='section-title'>
@@ -41,7 +41,8 @@ booksWithCovers.slice(0,30).map((item,index)=>{
    </div>
    </div>
    </section>
-   </>
+   <Outlet />
+   </div>
   )
 }
 

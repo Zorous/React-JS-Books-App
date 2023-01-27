@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import "./Navbar.css";
 
 import logo from '../../images/logo.jpg';
@@ -7,11 +7,11 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 function Navbar() {
     const [toggleMenu, setToggleMenu] = useState(false);
-    const handleNavbar=()=>(setToggleMenu(!toggleMenu))
-    
+    const handleNavbar = () => (setToggleMenu(!toggleMenu))
+
 
     return (
-        <nav className='navbar' id='navbar'>
+    <nav className='navbar' id='navbar'>
             <div className='container navbar-content flex'>
                 <div className='brand-and-toggler flex flex-sb'>
                     <Link className='navbar-brand flex' to="/">
@@ -25,20 +25,21 @@ function Navbar() {
                         }}></HiOutlineMenuAlt3>
                     </button>
                 </div>
-            
+
                 <div className={toggleMenu ? "navbar-collapse show-navbar-collapse" : "navbar-collapse"}>
-                <ul className='navbar-nav'>
-                         <li className='navbar-item'>
-                         <Link to="/" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'><span className='nav-linkX'>Home</span></Link>
-                         </li>
-                         <li className='navbar-item'>
-                         <Link to="/about" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>About</Link>
-                         </li>
-                </ul>
+                    <ul className='navbar-nav'>
+                        <li className='navbar-item'>
+                            <Link to="/" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'><span className='nav-linkX'>Home</span></Link>
+                        </li>
+                        <li className='navbar-item'>
+                            <Link to="/about" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>About</Link>
+                        </li>
+                    </ul>
                 </div>
 
             </div>
         </nav>
+      
     )
 }
 

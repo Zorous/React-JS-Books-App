@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import SearchForm from '../SeachForm/SearchForm';
 import "./Header.css";
@@ -6,6 +7,7 @@ import "./Header.css";
 
 function Header() {
   return (
+    <>
     <div className='holder'>
     <header className='header'>
     <Navbar />
@@ -15,12 +17,16 @@ function Header() {
     </h2>
     <br />
     <p className='header-text fs-18 fw-3'>
-    lorem text
+    Have you always wanted to be part of a book club but never had the time?
+    <br/> Now you can join Bookclub from the comfort of your own home!
     </p>
     <SearchForm />
     </div>
     </header>
     </div>
+
+    <Outlet />
+    </>
   )
 }
 
