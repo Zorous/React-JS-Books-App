@@ -1,6 +1,7 @@
-
-<img src="https://drive.google.com/uc?export=view&id=14HXLsLSlAqiTd7Oh3CxMrX2ms1ercNDk" alt="mockup"/>
-# Getting Started with Create React App
+<p align="center">
+<img src="https://user-images.githubusercontent.com/91610919/217025699-acd26b92-4bbf-4ade-b816-8718777195b7.png" />
+</p>
+<h2>This is a React JS App that allows you to search on one of the largest book's libraries and show the details of your favorite Book</h2>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
